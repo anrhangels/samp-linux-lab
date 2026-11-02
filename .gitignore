@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.log
+*.mkv
+*.mp4
+*.exe
+*.dll
+*.asi
+*.ttf
+*.so
+*.reg
+*.bak
+logs/
+backups/
+prefix/
+.env
+.env.*
