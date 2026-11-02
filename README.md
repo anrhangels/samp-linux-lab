@@ -1,6 +1,6 @@
 # SA-MP Linux Lab
 
-Личный эксперимент по запуску SA-MP/CRMP-проектов на Linux. Первый проверенный проект — **Arizona RP**. Цель: запуск официального лаунчера, вход на сервер, работа ввода и голоса, удобная диагностика и воспроизводимые инструкции.
+Личный эксперимент по запуску SA-MP/CRMP-проектов на Linux. Цель: запуск официального лаунчера, вход на сервер, работа ввода и голоса, удобная диагностика и воспроизводимые инструкции.
 
 Это база для дальнейших экспериментов, а не универсальная гарантия совместимости всех проектов. Репозиторий не связан с разработчиками Arizona, SA-MP, Wine или Faugus.
 
@@ -11,7 +11,6 @@
 | Arizona RP / Mesa | Лаунчер и игра запускаются, регистрация через старую форму выполнена, игровой чат работает; голосовой модуль подключается |
 | Advance RP | Изучены инструкции; практическая совместимость не проверена |
 | Radmir RP / CRMP | Не проверен |
-| Diamond RP | Не проверен |
 
 Проверка проводилась 2–3 ноября 2026 года на Arch Linux, Hyprland/Xwayland, Intel Core i7-13650HX и NVIDIA RTX 4060 Laptop. Использованы Faugus Flatpak 2.5.6, GE-Proton 11-11, umu 1.4.4 и MangoHud 0.8.4. Это описание одной конфигурации, не минимальные требования.
 
@@ -98,3 +97,4 @@ python3 scripts/samp_linux.py launch --game arizona-launcher
 - Контролируемые записи времени кадра вместо сравнения только максимального FPS.
 
 Источники: [Faugus](https://github.com/Faugus/faugus-launcher), [GE-Proton](https://github.com/GloriousEggroll/proton-ge-custom), [umu](https://github.com/Open-Wine-Components/umu-launcher), [MangoHud](https://github.com/flightlessmango/MangoHud), [DXVK](https://github.com/doitsujin/dxvk).
+
