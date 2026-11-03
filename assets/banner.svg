@@ -1,11 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
-<title id="title">SA-MP Linux Lab</title><desc id="desc">Запуск RP-проектов на Linux. Гайды, инструменты и проверенные решения.</desc>
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101d35"/><stop offset="1" stop-color="#080e1a"/></linearGradient><linearGradient id="accent"><stop stop-color="#58e8bd"/><stop offset="1" stop-color="#6aaaff"/></linearGradient><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7699bc" stroke-opacity=".09"/></pattern></defs>
-<rect width="1280" height="360" rx="24" fill="url(#bg)"/><rect width="1280" height="360" rx="24" fill="url(#grid)"/>
-<rect x="64" y="60" width="46" height="5" rx="2" fill="#58e8bd"/><text x="125" y="68" font-family="sans-serif" font-size="15" letter-spacing="4" fill="#a8bad1">COMMUNITY KNOWLEDGE BASE</text>
-<text x="60" y="156" font-family="sans-serif" font-weight="800" font-size="66" fill="#f1f6ff">SA-MP <tspan fill="#58e8bd">LINUX LAB</tspan></text>
-<text x="64" y="206" font-family="sans-serif" font-size="25" fill="#b6c6dd">RP-проекты на Linux: от установки до игры</text>
-<rect x="64" y="251" width="470" height="44" rx="10" fill="#152b3c" stroke="#294459"/><text x="84" y="279" font-family="sans-serif" font-size="17" fill="#79e6c4">Гайды  /  Исправления  /  Диагностика</text>
-<rect x="884" y="85" width="322" height="195" rx="16" fill="#0a1424" stroke="#2b4563"/><circle cx="908" cy="108" r="4" fill="#58e8bd"/><circle cx="924" cy="108" r="4" fill="#6aaaff"/><circle cx="940" cy="108" r="4" fill="#9aaec7"/><path d="M884 125H1206" stroke="#2b4563"/><text x="908" y="164" font-family="monospace" font-size="17" fill="#58e8bd">$ ./arizona.sh check</text><text x="908" y="201" font-family="monospace" font-size="16" fill="#b6c6dd">launcher · proton · prefix</text><text x="908" y="240" font-family="monospace" font-size="17" fill="#6aaaff">ready to play _</text>
-<rect x="64" y="332" width="1152" height="3" rx="1" fill="url(#accent)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+<title id="title">SA-MP Linux Lab</title>
+<desc id="desc">Понятный путь к игре на Linux. Установка, запуск и проверенные решения. Тёмный фон с лавандовыми и мятными акцентами.</desc>
+<defs>
+ <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#15192D"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
+ <linearGradient id="accent"><stop stop-color="#B8A2FF"/><stop offset="1" stop-color="#92F3CE"/></linearGradient>
+ <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#B8A2FF" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="1280" height="440" rx="28" fill="url(#bg)"/>
+<rect width="1280" height="440" rx="28" fill="url(#grid)"/>
+<path d="M855 0L1280 305M1015 0L1280 190" stroke="#B8A2FF" stroke-opacity=".12" stroke-width="60"/>
+<g font-family="DejaVu Sans, sans-serif">
+ <rect x="56" y="46" width="275" height="34" rx="17" fill="#B8A2FF" fill-opacity=".12"/>
+ <circle cx="77" cy="63" r="4" fill="#92F3CE"/>
+ <text x="92" y="69" font-size="13" letter-spacing="2" fill="#CFC2FF">COMMUNITY FIELD NOTES</text>
+ <text x="53" y="160" font-size="65" font-weight="700" letter-spacing="-2" fill="#EEF0FF">SA-MP Linux Lab</text>
+ <text x="57" y="215" font-size="27" fill="#C6C8DD">Понятный путь к игре на Linux.</text>
+ <text x="57" y="255" font-size="18" fill="#9198B4">Установка. Запуск. Проверенные решения.</text>
+ <rect x="56" y="313" width="175" height="48" rx="12" fill="#92F3CE"/>
+ <text x="80" y="343" font-size="17" font-weight="700" fill="#0B1020">НАЧНИТЕ ЗДЕСЬ</text>
+ <text x="252" y="343" font-size="16" fill="#C6C8DD">Faugus + Proton</text>
+ <g transform="translate(899 110)">
+  <rect width="310" height="220" rx="20" fill="#11172A" stroke="#3C4260"/>
+  <path d="M0 43H310" stroke="#3C4260"/>
+  <circle cx="22" cy="22" r="5" fill="#FFD7AD"/><circle cx="40" cy="22" r="5" fill="#B8A2FF"/><circle cx="58" cy="22" r="5" fill="#92F3CE"/>
+  <text x="25" y="89" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#B8A2FF">&gt; prepare</text>
+  <text x="25" y="127" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#92F3CE">&gt; launch</text>
+  <text x="25" y="165" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#FFD7AD">&gt; play_</text>
+ </g>
+</g>
+<rect x="56" y="408" width="1168" height="3" rx="1.5" fill="url(#accent)"/>
 </svg>

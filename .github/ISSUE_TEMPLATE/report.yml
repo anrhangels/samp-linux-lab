@@ -1,0 +1,45 @@
+name: Запуск игры или ошибка
+description: Расскажите о результате проверки или попросите помощь с запуском.
+title: "[Проект]: краткое описание"
+body:
+  - type: markdown
+    attributes:
+      value: "Спасибо за проверку! Перед отправкой уберите из вложений данные аккаунта и личную переписку."
+  - type: input
+    id: project
+    attributes:
+      label: Игра, сервер и дата проверки
+      placeholder: Arizona RP, Mesa, 04.11.2026
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Окружение
+      description: Дистрибутив, рабочий стол, Wayland или X11, GPU и драйвер, версии Faugus и Proton. Укажите способ установки Faugus.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Шаги и результат
+      description: Что делали, чего ожидали, что получилось? Если меняли настройку, укажите её прежнее и новое значение.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: Что удалось проверить
+      options:
+        - label: Открытие официального лаунчера
+        - label: Вход на сервер
+        - label: Передвижение и управление
+        - label: Русский чат
+        - label: Передача голоса с другим игроком
+        - label: Повторный запуск
+  - type: textarea
+    id: logs
+    attributes:
+      label: Ошибка или фрагмент лога
+      description: Достаточно первой ошибки и соседних строк. Полный префикс, реестр и игровые файлы не нужны.
+      render: text

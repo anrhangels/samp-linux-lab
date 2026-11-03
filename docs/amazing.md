@@ -1,4 +1,4 @@
-[← На главную](../README.md) · [Журнал экспериментов](experiments.md)
+[← Документация](README.md) · [Быстрый старт](quickstart.md) · [Словарь](glossary.md)
 
 # Amazing Online: итог проверки на Linux
 

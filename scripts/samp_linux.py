@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small, local helpers for existing Faugus installations; Python stdlib only."""
+"""Локальные инструменты для Faugus Flatpak: проверка среды, список игр, запуск и MangoHud."""
 import argparse
 from datetime import datetime
 import json
@@ -22,14 +22,14 @@ GAMES = HOME / ".var/app" / APP / "data/faugus-launcher/games.json"
 def read_games():
     data = json.loads(GAMES.read_text())
     if not isinstance(data, list):
-        raise ValueError("Unexpected Faugus games.json format")
+        raise ValueError("Неожиданный формат games.json Faugus")
     return data
 
 
 def select_game(games, gameid):
     matches = [g for g in games if g.get("gameid") == gameid]
     if len(matches) != 1:
-        raise ValueError("Game ID must identify exactly one existing Faugus entry; use list")
+        raise ValueError("ID должен соответствовать одной записи Faugus. Посмотрите ID командой list")
     return matches[0]
 
 
@@ -55,16 +55,16 @@ def layer_runtime():
     metadata = (Path(location) / "metadata").read_text()
     section = re.search(r"\[Extension org\.freedesktop\.Platform\.VulkanLayer\]\n([^\[]*)", metadata)
     if not section:
-        raise ValueError("Runtime does not advertise a VulkanLayer extension")
+        raise ValueError("В метаданных runtime не найдено расширение VulkanLayer")
     match = re.search(r"^version\s*=\s*(\S+)", section.group(1), re.M)
     if not match:
-        raise ValueError("Could not identify the VulkanLayer branch")
+        raise ValueError("Не удалось определить ветку VulkanLayer")
     branch = match.group(1)
     ref = f"org.freedesktop.Platform.VulkanLayer.MangoHud//{branch}"
     result = subprocess.run(["flatpak", "info", "--show-location", ref],
                             capture_output=True, text=True)
     if result.returncode:
-        raise ValueError(f"Install first: flatpak install --user flathub {ref}")
+        raise ValueError(f"Сначала установите расширение: flatpak install --user flathub {ref}")
     return Path(result.stdout.strip()) / "files"
 
 
@@ -79,7 +79,7 @@ def configure_hud(gameid):
         src = runtime / "lib" / abi / "libMangoHud.so"
         manifest = runtime / "share/vulkan/implicit_layer.d" / f"MangoHud.{arch}.json"
         if not src.is_file() or not manifest.is_file():
-            raise ValueError(f"Missing {abi} library or manifest")
+            raise ValueError(f"Не найдена библиотека или манифест {abi}")
         sources.append((arch, abi, src, manifest))
     snapshot = STATE / "backups" / datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     backup(GAMES, snapshot)
@@ -119,8 +119,8 @@ def configure_hud(gameid):
         f"{k}={shlex.quote(v)}" for k, v in extra.items())).strip()
     game["mangohud"] = ""
     atomic_text(GAMES, json.dumps(games, ensure_ascii=False, indent=4) + "\n")
-    print(f"HUD configured. Backup: {snapshot}")
-    print("Restart Faugus. F10: minimal / full / hidden. F12: show / hide.")
+    print(f"HUD настроен. Резервная копия: {snapshot}")
+    print("Перезапустите Faugus. F10: кратко / подробно / скрыто. F12: показать / скрыть.")
 
 
 def launch(gameid):
@@ -128,7 +128,7 @@ def launch(gameid):
     logs = STATE / "logs"
     logs.mkdir(parents=True, exist_ok=True)
     target = logs / (datetime.now().strftime("%Y%m%d-%H%M%S-%f") + ".log")
-    print(f"Local log: {target}", flush=True)
+    print(f"Лог запуска: {target}", flush=True)
     with target.open("w") as output:
         with subprocess.Popen(["flatpak", "run", APP, "--game", gameid, "--logs"],
                               stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
@@ -143,14 +143,14 @@ def launch(gameid):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=["doctor", "list", "launch", "hud"])
-    parser.add_argument("--game", default="arizona-launcher")
+    parser.add_argument("--game", default="arizona-launcher", help="ID записи Faugus (по умолчанию: arizona-launcher)")
     args = parser.parse_args()
     if args.command == "doctor":
         print("OS:", platform.system(), "Kernel:", platform.release())
-        print("Faugus configuration:", "found" if GAMES.is_file() else "missing")
+        print("Конфигурация Faugus:", "найдена" if GAMES.is_file() else "не найдена — создайте запись игры в Faugus")
         for command in ["flatpak", "git", "nvidia-smi"]:
-            print(command + ":", shutil.which(command) or "not installed")
-        print("No credentials, registry, or chat logs are collected.")
+            print(command + ":", shutil.which(command) or "не установлен")
+        print("Это локальная справка: учётные данные, реестр и чат не собираются.")
     elif args.command == "list":
         for game in read_games():
             print(game.get("gameid"), "|", game.get("title"), "|", game.get("runner"))
@@ -165,4 +165,4 @@ if __name__ == "__main__":
     try:
         sys.exit(main())
     except (OSError, ValueError, subprocess.CalledProcessError) as error:
-        sys.exit(f"Error: {error}")
+        sys.exit(f"Ошибка: {error}")
