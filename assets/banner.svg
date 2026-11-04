@@ -1,32 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
-<title id="title">SA-MP Linux Lab</title>
-<desc id="desc">Понятный путь к игре на Linux. Установка, запуск и проверенные решения. Тёмный фон с лавандовыми и мятными акцентами.</desc>
-<defs>
- <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#15192D"/><stop offset="1" stop-color="#0B1020"/></linearGradient>
- <linearGradient id="accent"><stop stop-color="#B8A2FF"/><stop offset="1" stop-color="#92F3CE"/></linearGradient>
- <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#B8A2FF" stroke-opacity=".045"/></pattern>
-</defs>
-<rect width="1280" height="440" rx="28" fill="url(#bg)"/>
-<rect width="1280" height="440" rx="28" fill="url(#grid)"/>
-<path d="M855 0L1280 305M1015 0L1280 190" stroke="#B8A2FF" stroke-opacity=".12" stroke-width="60"/>
-<g font-family="DejaVu Sans, sans-serif">
- <rect x="56" y="46" width="275" height="34" rx="17" fill="#B8A2FF" fill-opacity=".12"/>
- <circle cx="77" cy="63" r="4" fill="#92F3CE"/>
- <text x="92" y="69" font-size="13" letter-spacing="2" fill="#CFC2FF">COMMUNITY FIELD NOTES</text>
- <text x="53" y="160" font-size="65" font-weight="700" letter-spacing="-2" fill="#EEF0FF">SA-MP Linux Lab</text>
- <text x="57" y="215" font-size="27" fill="#C6C8DD">Понятный путь к игре на Linux.</text>
- <text x="57" y="255" font-size="18" fill="#9198B4">Установка. Запуск. Проверенные решения.</text>
- <rect x="56" y="313" width="175" height="48" rx="12" fill="#92F3CE"/>
- <text x="80" y="343" font-size="17" font-weight="700" fill="#0B1020">НАЧНИТЕ ЗДЕСЬ</text>
- <text x="252" y="343" font-size="16" fill="#C6C8DD">Faugus + Proton</text>
- <g transform="translate(899 110)">
-  <rect width="310" height="220" rx="20" fill="#11172A" stroke="#3C4260"/>
-  <path d="M0 43H310" stroke="#3C4260"/>
-  <circle cx="22" cy="22" r="5" fill="#FFD7AD"/><circle cx="40" cy="22" r="5" fill="#B8A2FF"/><circle cx="58" cy="22" r="5" fill="#92F3CE"/>
-  <text x="25" y="89" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#B8A2FF">&gt; prepare</text>
-  <text x="25" y="127" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#92F3CE">&gt; launch</text>
-  <text x="25" y="165" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#FFD7AD">&gt; play_</text>
- </g>
-</g>
-<rect x="56" y="408" width="1168" height="3" rx="1.5" fill="url(#accent)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="620" viewBox="0 0 1440 620" role="img" aria-labelledby="title desc">
+<title id="title">Linux RP — документация и исследования</title><desc id="desc">Редакционная обложка: светлая бумага, тёмный терминал и три карточки проектов.</desc>
+<rect width="1440" height="620" fill="#F5F1E9"/>
+<g fill="#292824" font-family="DejaVu Sans Mono,monospace"><text x="48" y="40" font-size="14">ANRHANGELS / LINUX RP</text><text x="1148" y="40" font-size="13">RESEARCH NOTES</text></g>
+<path d="M48 60H1392" stroke="#D8D1C5"/>
+<text x="48" y="141" font-size="55" fill="#292824" font-family="DejaVu Serif,Georgia,serif">Практика. Проверки. Выводы.</text>
+<rect x="48" y="187" width="1344" height="352" rx="16" fill="#191918"/>
+<path d="M64 187H1376Q1392 187 1392 203V227H48V203Q48 187 64 187" fill="#2A2926"/>
+<g><circle cx="72" cy="207" r="5" fill="#D77C60"/><circle cx="92" cy="207" r="5" fill="#D3B97B"/><circle cx="112" cy="207" r="5" fill="#82A492"/></g>
+<g font-family="DejaVu Sans Mono,monospace"><text x="143" y="212" fill="#AAA398" font-size="13">~/linux-rp / notes</text><text x="82" y="282" fill="#C2B9A9" font-size="18">$ cat research-notes</text></g>
+<text x="80" y="354" font-family="DejaVu Serif,Georgia,serif" font-size="46" fill="#F5F1E9">Игры на Linux.</text><text x="82" y="408" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#B5AC9D">Настройки, которые проверили.</text><text x="82" y="444" font-family="DejaVu Sans,sans-serif" font-size="23" fill="#B5AC9D">Ограничения, которые сохранили.</text>
+<g transform="translate(890 352) rotate(-12)"><rect x="-93" y="-86" width="186" height="204" rx="13" fill="#302E2A" stroke="#10100F" stroke-width="4"/><text x="-67" y="-46" fill="#D77C60" font-size="14" font-family="monospace">ARIZONA</text><path d="M-66-15H62M-66 6H45M-66 27H57" stroke="#777166" stroke-width="7" stroke-linecap="round"/></g>
+<g transform="translate(1214 352) rotate(12)"><rect x="-93" y="-86" width="186" height="204" rx="13" fill="#302E2A" stroke="#10100F" stroke-width="4"/><text x="-67" y="-46" fill="#B6A18A" font-size="14" font-family="monospace">AMAZING</text><path d="M-66-15H62M-66 6H45M-66 27H57" stroke="#777166" stroke-width="7" stroke-linecap="round"/></g>
+<g transform="translate(1051 339)"><rect x="-93" y="-86" width="186" height="228" rx="13" fill="#302E2A" stroke="#10100F" stroke-width="4"/><text x="-67" y="-46" fill="#82A492" font-size="14" font-family="monospace">RADMIR</text><path d="M-66-15H62M-66 6H45M-66 27H57" stroke="#777166" stroke-width="7" stroke-linecap="round"/><path d="M-66 105H60" stroke="#82A492" stroke-width="3"/></g>
+<text x="48" y="585" fill="#6F695F" font-family="DejaVu Sans Mono,monospace" font-size="14">ДОКУМЕНТАЦИЯ / СКРИПТЫ / ОТЧЁТЫ</text><text x="1164" y="585" fill="#8F8B82" font-family="monospace" font-size="13">OPEN SOURCE / RU</text>
 </svg>
